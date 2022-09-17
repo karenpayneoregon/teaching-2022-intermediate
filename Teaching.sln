@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndexMonths", "IndexMonths\IndexMonths.csproj", "{64D6E3A0-C3C9-416C-95C5-9788702F41EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranges-examples", "Ranges-examples\Ranges-examples.csproj", "{965BF232-98D7-4380-A8F1-AFC9B194CEED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{67A15997-6C5A-40BE-A05B-AC598663E71B}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Indexing and ranges", "Indexing and ranges", "{A2227E7A-9535-4C47-9F77-4D042ABA28EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF Core", "EF Core", "{2071E838-28A1-45EF-89B2-FEC87A49EE8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxpayerLibraryEntityVersion", "TaxpayerLibraryEntityVersion\TaxpayerLibraryEntityVersion.csproj", "{A4AF4F2E-1202-43F9-A722-CAC470149897}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxpayerMocking", "TaxpayerMocking\TaxpayerMocking.csproj", "{2DAEF9CE-9891-45E1-AAFB-DCDCA990BF92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64D6E3A0-C3C9-416C-95C5-9788702F41EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D6E3A0-C3C9-416C-95C5-9788702F41EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D6E3A0-C3C9-416C-95C5-9788702F41EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D6E3A0-C3C9-416C-95C5-9788702F41EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965BF232-98D7-4380-A8F1-AFC9B194CEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965BF232-98D7-4380-A8F1-AFC9B194CEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965BF232-98D7-4380-A8F1-AFC9B194CEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965BF232-98D7-4380-A8F1-AFC9B194CEED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4AF4F2E-1202-43F9-A722-CAC470149897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4AF4F2E-1202-43F9-A722-CAC470149897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4AF4F2E-1202-43F9-A722-CAC470149897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4AF4F2E-1202-43F9-A722-CAC470149897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DAEF9CE-9891-45E1-AAFB-DCDCA990BF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DAEF9CE-9891-45E1-AAFB-DCDCA990BF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DAEF9CE-9891-45E1-AAFB-DCDCA990BF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DAEF9CE-9891-45E1-AAFB-DCDCA990BF92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64D6E3A0-C3C9-416C-95C5-9788702F41EF} = {A2227E7A-9535-4C47-9F77-4D042ABA28EA}
+		{965BF232-98D7-4380-A8F1-AFC9B194CEED} = {A2227E7A-9535-4C47-9F77-4D042ABA28EA}
+		{A4AF4F2E-1202-43F9-A722-CAC470149897} = {2071E838-28A1-45EF-89B2-FEC87A49EE8D}
+		{2DAEF9CE-9891-45E1-AAFB-DCDCA990BF92} = {2071E838-28A1-45EF-89B2-FEC87A49EE8D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40EA236A-E0CE-4872-A086-DBA437CADC27}
+	EndGlobalSection
+EndGlobal
