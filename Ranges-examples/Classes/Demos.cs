@@ -51,7 +51,7 @@ namespace Classes
 
             var startIndex = list.Find(x => x == 2);
             var endIndex = startIndex + 3;
-            //var range = (new Index(find),new Index(2 - find,true));
+            
 
 
             if (endIndex <= list.Count)
@@ -151,7 +151,7 @@ namespace Classes
             {
                 foreach (var result in cities)
                 {
-                    Debug.WriteLine(result);
+                    Console.WriteLine(result);
                 }
             }
             else

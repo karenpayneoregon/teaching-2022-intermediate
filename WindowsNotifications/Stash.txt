@@ -1,0 +1,13 @@
+﻿// https://learn.microsoft.com/en-us/windows/apps/design/shell/tiles-and-notifications/send-local-toast?tabs=desktop
+// https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/desktop-to-uwp-enhance
+// https://andrewleader.medium.com/new-net-5-windows-tfms-explained-55efac9405f6
+// https://learn.microsoft.com/en-us/windows/apps/design/shell/tiles-and-notifications/adaptive-interactive-toasts?tabs=builder-syntax
+// https://stackoverflow.com/questions/66694454/how-can-i-make-a-notification-in-a-c-sharp-windows-app-with-a-custom-image-and-o
+// https://stackoverflow.com/a/66744863/5509738
+
+// Clear notifications
+// https://learn.microsoft.com/en-us/windows/apps/design/shell/tiles-and-notifications/send-local-toast?tabs=desktop#clear-your-notifications
+
+
+
+https://learn.microsoft.com/en-us/windows/apps/design/shell/tiles-and-notifications/send-local-toast?tabs=desktop

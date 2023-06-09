@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
-
+using Classes;
 using Ranges_examples.Classes;
 using Ranges_examples.LanguageExtensions;
 using Spectre.Console;
@@ -26,6 +26,7 @@ namespace Ranges_examples
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            Demos.Creating1();
             Console.ReadLine();
         }
 
