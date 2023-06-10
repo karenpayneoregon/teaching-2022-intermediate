@@ -28,61 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ExecuteButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ExecuteWithMessageBoxButton = new System.Windows.Forms.Button();
+            this.HeroButton = new System.Windows.Forms.Button();
+            this.ScheduleButton = new System.Windows.Forms.Button();
+            this.AlarmButton = new System.Windows.Forms.Button();
+            this.TextInputButton = new System.Windows.Forms.Button();
+            this.SelectButton = new System.Windows.Forms.Button();
+            this.DownLoadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ExecuteButton
+            // ExecuteWithMessageBoxButton
             // 
-            this.ExecuteButton.Location = new System.Drawing.Point(125, 75);
-            this.ExecuteButton.Name = "ExecuteButton";
-            this.ExecuteButton.Size = new System.Drawing.Size(94, 29);
-            this.ExecuteButton.TabIndex = 0;
-            this.ExecuteButton.Text = "Execute";
-            this.ExecuteButton.UseVisualStyleBackColor = true;
-            this.ExecuteButton.Click += new System.EventHandler(this.ExecuteButton_Click);
+            this.ExecuteWithMessageBoxButton.Location = new System.Drawing.Point(23, 257);
+            this.ExecuteWithMessageBoxButton.Name = "ExecuteWithMessageBoxButton";
+            this.ExecuteWithMessageBoxButton.Size = new System.Drawing.Size(295, 29);
+            this.ExecuteWithMessageBoxButton.TabIndex = 6;
+            this.ExecuteWithMessageBoxButton.Text = "Execute  uncommon";
+            this.ExecuteWithMessageBoxButton.UseVisualStyleBackColor = true;
+            this.ExecuteWithMessageBoxButton.Click += new System.EventHandler(this.ExecuteWithMessageBoxButton_Click);
             // 
-            // button1
+            // HeroButton
             // 
-            this.button1.Location = new System.Drawing.Point(125, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.HeroButton.Location = new System.Drawing.Point(23, 47);
+            this.HeroButton.Name = "HeroButton";
+            this.HeroButton.Size = new System.Drawing.Size(295, 29);
+            this.HeroButton.TabIndex = 0;
+            this.HeroButton.Text = "Hero";
+            this.HeroButton.UseVisualStyleBackColor = true;
+            this.HeroButton.Click += new System.EventHandler(this.HeroButton_Click);
             // 
-            // button2
+            // ScheduleButton
             // 
-            this.button2.Location = new System.Drawing.Point(125, 145);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ScheduleButton.Location = new System.Drawing.Point(23, 82);
+            this.ScheduleButton.Name = "ScheduleButton";
+            this.ScheduleButton.Size = new System.Drawing.Size(295, 29);
+            this.ScheduleButton.TabIndex = 1;
+            this.ScheduleButton.Text = "Schedule - in five seconds";
+            this.ScheduleButton.UseVisualStyleBackColor = true;
+            this.ScheduleButton.Click += new System.EventHandler(this.ScheduleButton_Click);
             // 
-            // button3
+            // AlarmButton
             // 
-            this.button3.Location = new System.Drawing.Point(125, 180);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.AlarmButton.Location = new System.Drawing.Point(23, 117);
+            this.AlarmButton.Name = "AlarmButton";
+            this.AlarmButton.Size = new System.Drawing.Size(295, 29);
+            this.AlarmButton.TabIndex = 2;
+            this.AlarmButton.Text = "Alarm";
+            this.AlarmButton.UseVisualStyleBackColor = true;
+            this.AlarmButton.Click += new System.EventHandler(this.AlarmButton_Click);
+            // 
+            // TextInputButton
+            // 
+            this.TextInputButton.Location = new System.Drawing.Point(23, 152);
+            this.TextInputButton.Name = "TextInputButton";
+            this.TextInputButton.Size = new System.Drawing.Size(295, 29);
+            this.TextInputButton.TabIndex = 3;
+            this.TextInputButton.Text = "Text input";
+            this.TextInputButton.UseVisualStyleBackColor = true;
+            this.TextInputButton.Click += new System.EventHandler(this.TextInputButton_Click);
+            // 
+            // SelectButton
+            // 
+            this.SelectButton.Location = new System.Drawing.Point(23, 187);
+            this.SelectButton.Name = "SelectButton";
+            this.SelectButton.Size = new System.Drawing.Size(295, 29);
+            this.SelectButton.TabIndex = 4;
+            this.SelectButton.Text = "ComboBox";
+            this.SelectButton.UseVisualStyleBackColor = true;
+            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
+            // 
+            // DownLoadButton
+            // 
+            this.DownLoadButton.Location = new System.Drawing.Point(23, 222);
+            this.DownLoadButton.Name = "DownLoadButton";
+            this.DownLoadButton.Size = new System.Drawing.Size(295, 29);
+            this.DownLoadButton.TabIndex = 5;
+            this.DownLoadButton.Text = "Download";
+            this.DownLoadButton.UseVisualStyleBackColor = true;
+            this.DownLoadButton.Click += new System.EventHandler(this.DownLoadButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 228);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.ExecuteButton);
+            this.ClientSize = new System.Drawing.Size(344, 347);
+            this.Controls.Add(this.DownLoadButton);
+            this.Controls.Add(this.SelectButton);
+            this.Controls.Add(this.TextInputButton);
+            this.Controls.Add(this.AlarmButton);
+            this.Controls.Add(this.ScheduleButton);
+            this.Controls.Add(this.HeroButton);
+            this.Controls.Add(this.ExecuteWithMessageBoxButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -93,9 +129,12 @@
 
         #endregion
 
-        private Button ExecuteButton;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button ExecuteWithMessageBoxButton;
+        private Button HeroButton;
+        private Button ScheduleButton;
+        private Button AlarmButton;
+        private Button TextInputButton;
+        private Button SelectButton;
+        private Button DownLoadButton;
     }
 }

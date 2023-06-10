@@ -40,19 +40,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="alarm.png">
+		<None Update="Images\alarm.png">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="auto1.png">
+		<None Update="Images\auto1.png">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="checkMark.png">
+		<None Update="Images\CheckBoxes.png">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="Karen.png">
+		<None Update="Images\checkMark.png">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="VisualStudioTips_1.png">
+		<None Update="Images\Karen.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Images\VisualStudioTips_1.png">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>

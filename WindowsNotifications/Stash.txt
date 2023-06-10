@@ -11,3 +11,12 @@
 
 
 https://learn.microsoft.com/en-us/windows/apps/design/shell/tiles-and-notifications/send-local-toast?tabs=desktop
+
+
+https://webbibouroku.com/Blog/Article/toast-cs
+
+Wiki
+https://github.com/CommunityToolkit/WindowsCommunityToolkit
+
+ASP
+https://github.com/aspnetcorehero/ToastNotification
