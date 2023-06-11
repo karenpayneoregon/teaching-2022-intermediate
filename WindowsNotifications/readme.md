@@ -1,5 +1,9 @@
 ﻿# About
 
+What is a toast notification in Windows 10?
+Send a local toast notification from a C# app - Windows apps ...
+A toast notification is a message that your app can construct and deliver to your user while they are not currently inside your app. 
+
 A very simple example for `toast notifications` where it is configured to clear the event to capture user actions when the application is closed, to change this behavior comment out the code in form closing event.
 
 Notes 

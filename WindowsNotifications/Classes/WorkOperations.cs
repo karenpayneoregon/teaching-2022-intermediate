@@ -1,17 +1,18 @@
 ﻿using Notifications.Models;
 using System.Text.Json;
+using Log = Serilog.Log;
 
 namespace Notifications.Classes;
 public class WorkOperations
 {
     public static void Snooze()
     {
-        // TODO
+        Log.Information("Snooze at {D1}", DateTime.Now.ToString("h:mm:ss tt"));
     }
 
     public static void GotoWork()
     {
-        // TODO
+        Log.Information("Go to work at {D1}", DateTime.Now.ToString("h:mm:ss tt"));
     }
 
     public static async Task<List<PublicHoliday>> GetHolidays(string countryCode = "US")
@@ -25,7 +26,7 @@ public class WorkOperations
 
         if (response.IsSuccessStatusCode)
         {
-            await using var jsonStream = await response.Content.ReadAsStreamAsync();
+            await using Stream jsonStream = await response.Content.ReadAsStreamAsync();
 
             // Distinct is used as there were duplicate entries
             return JsonSerializer.Deserialize<PublicHoliday[]>(jsonStream, jsonSerializerOptions)

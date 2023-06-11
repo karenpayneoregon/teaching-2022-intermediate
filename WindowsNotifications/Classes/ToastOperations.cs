@@ -1,14 +1,8 @@
-﻿using Microsoft.Toolkit.Uwp.Notifications;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Data.Xml.Dom;
+﻿using System.Diagnostics;
+using Microsoft.Toolkit.Uwp.Notifications;
 using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
-using Windows.UI.Notifications;
+using Log = Serilog.Log;
 
 namespace Notifications.Classes;
 
@@ -23,7 +17,6 @@ public class ToastOperations
         { "key4", 400 }
     };
 
-    public static Button ExecuteButton { get; set; } = null!;
     public static string MainKey => "conversationId";
 
     public static bool ListenerAvailable()
@@ -42,7 +35,8 @@ public class ToastOperations
     {
         ToastNotificationManagerCompat.History.Clear();
     }
-    public static void Listener()
+
+    public static void OnActivated()
     {
         ToastNotificationManagerCompat.OnActivated += toastArgs =>
         {
@@ -52,7 +46,7 @@ public class ToastOperations
             {
                 if (args[MainKey] == Dictionary["key2"].ToString())
                 {
-                    Dialogs.Information(ExecuteButton, "Notification triggered", "Woohoo");
+                    Log.Information("Notification triggered");
                 }
                 else if (args[MainKey] == Dictionary["key1"].ToString())
                 {
@@ -81,7 +75,8 @@ public class ToastOperations
                     var favoriteColor = valueSet["favoriteColor"].ToString();
                     if (!string.IsNullOrWhiteSpace(favoriteColor))
                     {
-                        Debug.WriteLine($"favorite color: {favoriteColor}");
+                        Log.Information($"favorite color: {favoriteColor}");
+
                     }
 
                 }
@@ -89,7 +84,7 @@ public class ToastOperations
             else if (args.Contains("okColor"))
             {
                 ValueSet? valueSet = toastArgs.UserInput;
-                Debug.WriteLine($"favorite color: {valueSet["colors"]}");
+                Log.Information($"favorite color: {valueSet["colors"]}");
             }
         };
     }
@@ -108,8 +103,12 @@ public class ToastOperations
             .AddButton(new ToastButton()
                 .SetContent("Open URL")
                 .AddArgument("url", "https://dev.to/karenpayneoregon/aspnet-corerazor-pages-working-with-checkboxes-3ck4"))
+            .AddAttributionText("Cool code")
             .SetToastScenario(ToastScenario.Default)
-            .Show();    
+            .Show(toast =>
+            {
+                toast.ExpirationTime = DateTime.Now.AddDays(1);
+            });    
     }
     /// <summary>
     /// Shows notification that download was successful 
@@ -117,10 +116,14 @@ public class ToastOperations
     public static void HolidaysDownloaded()
     {
         new ToastContentBuilder()
-            .AddText("Holidays download")
+            .AddText("Go back to app")
+            .AddHeader("Holidays1", "Holidays download", "")
             .AddButton(new ToastButton().SetContent("OK"))
             .SetToastScenario(ToastScenario.Default)
-            .Show();
+            .Show(toast =>
+            {
+                toast.ExpirationTime = DateTime.Now.AddMinutes(2);
+            });
     }
     /// <summary>
     /// Shows notification that download was not successful 
@@ -132,7 +135,10 @@ public class ToastOperations
             .AddText("Email sent to developer")
             .AddButton(new ToastButton().SetContent("OK"))
             .SetToastScenario(ToastScenario.Alarm)
-            .Show();
+            .Show(toast =>
+            {
+                toast.ExpirationTime = DateTime.Now.AddMinutes(2);
+            });
     }
 
     public static void Alarm()

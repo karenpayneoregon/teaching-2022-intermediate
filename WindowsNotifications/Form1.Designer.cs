@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ExecuteWithMessageBoxButton = new System.Windows.Forms.Button();
+            this.ArticleButton = new System.Windows.Forms.Button();
             this.HeroButton = new System.Windows.Forms.Button();
             this.ScheduleButton = new System.Windows.Forms.Button();
             this.AlarmButton = new System.Windows.Forms.Button();
             this.TextInputButton = new System.Windows.Forms.Button();
             this.SelectButton = new System.Windows.Forms.Button();
             this.DownLoadButton = new System.Windows.Forms.Button();
+            this.StopScheduledNotificationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ExecuteWithMessageBoxButton
+            // ArticleButton
             // 
-            this.ExecuteWithMessageBoxButton.Location = new System.Drawing.Point(23, 257);
-            this.ExecuteWithMessageBoxButton.Name = "ExecuteWithMessageBoxButton";
-            this.ExecuteWithMessageBoxButton.Size = new System.Drawing.Size(295, 29);
-            this.ExecuteWithMessageBoxButton.TabIndex = 6;
-            this.ExecuteWithMessageBoxButton.Text = "Execute  uncommon";
-            this.ExecuteWithMessageBoxButton.UseVisualStyleBackColor = true;
-            this.ExecuteWithMessageBoxButton.Click += new System.EventHandler(this.ExecuteWithMessageBoxButton_Click);
+            this.ArticleButton.Location = new System.Drawing.Point(23, 257);
+            this.ArticleButton.Name = "ArticleButton";
+            this.ArticleButton.Size = new System.Drawing.Size(295, 29);
+            this.ArticleButton.TabIndex = 6;
+            this.ArticleButton.Text = "Show alert for article";
+            this.ArticleButton.UseVisualStyleBackColor = true;
+            this.ArticleButton.Click += new System.EventHandler(this.ExecuteAboutArticleButton_Click);
             // 
             // HeroButton
             // 
@@ -107,18 +108,30 @@
             this.DownLoadButton.UseVisualStyleBackColor = true;
             this.DownLoadButton.Click += new System.EventHandler(this.DownLoadButton_Click);
             // 
+            // StopScheduledNotificationButton
+            // 
+            this.StopScheduledNotificationButton.Location = new System.Drawing.Point(23, 292);
+            this.StopScheduledNotificationButton.Name = "StopScheduledNotificationButton";
+            this.StopScheduledNotificationButton.Size = new System.Drawing.Size(295, 29);
+            this.StopScheduledNotificationButton.TabIndex = 7;
+            this.StopScheduledNotificationButton.Text = "Stop annoying notification";
+            this.StopScheduledNotificationButton.UseVisualStyleBackColor = true;
+            this.StopScheduledNotificationButton.Click += new System.EventHandler(this.StopScheduledNotificationButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 347);
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.ClientSize = new System.Drawing.Size(344, 378);
+            this.Controls.Add(this.StopScheduledNotificationButton);
             this.Controls.Add(this.DownLoadButton);
             this.Controls.Add(this.SelectButton);
             this.Controls.Add(this.TextInputButton);
             this.Controls.Add(this.AlarmButton);
             this.Controls.Add(this.ScheduleButton);
             this.Controls.Add(this.HeroButton);
-            this.Controls.Add(this.ExecuteWithMessageBoxButton);
+            this.Controls.Add(this.ArticleButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -129,12 +142,13 @@
 
         #endregion
 
-        private Button ExecuteWithMessageBoxButton;
+        private Button ArticleButton;
         private Button HeroButton;
         private Button ScheduleButton;
         private Button AlarmButton;
         private Button TextInputButton;
         private Button SelectButton;
         private Button DownLoadButton;
+        private Button StopScheduledNotificationButton;
     }
 }

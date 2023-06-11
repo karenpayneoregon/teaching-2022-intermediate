@@ -1,13 +1,11 @@
-using System.Diagnostics;
-using System.Net;
-using System.Text.Json;
+using FluentScheduler;
 using Microsoft.Toolkit.Uwp.Notifications;
-using Notifications.Models;
 
 namespace Notifications;
 
 public partial class Form1 : Form
 {
+
     public Form1()
     {
         InitializeComponent();
@@ -20,35 +18,18 @@ public partial class Form1 : Form
                 button.Enabled = false;
             });
         }
-        else
-        {
-            Shown += OnShown!;
-            Closing += OnClosing;
-        }
 
-    }
-
-    private void OnClosing(object? sender, CancelEventArgs e)
-    {
-        ToastOperations.Clear();
-    }
-
-    private void OnShown(object sender, EventArgs e)
-    {
-        ToastOperations.Listener();
     }
 
     /// <summary>
     /// Here we present a notification and when the button is pressed in the notification
     /// show a message dialog (which typically is not done but some might want this. 
     /// </summary>
-    private async void ExecuteWithMessageBoxButton_Click(object sender, EventArgs e)
+    private async void ExecuteAboutArticleButton_Click(object sender, EventArgs e)
     {
-        ExecuteWithMessageBoxButton.Enabled = false;
+        ArticleButton.Enabled = false;
         await Helpers.SimulateWorkAsync();
-        ExecuteWithMessageBoxButton.Enabled = true;
-
-       ToastOperations.ExecuteButton = ExecuteWithMessageBoxButton;
+        ArticleButton.Enabled = true;
 
         var karenPhoto = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", @"Karen.png");
 
@@ -56,7 +37,7 @@ public partial class Form1 : Form
             .AddArgument("action", "viewConversation")
             .AddArgument("conversationId", ToastOperations.Dictionary["key2"])
             .AddText("Hey")
-            //.AddAppLogoOverride(new Uri(karenPhoto)).SetToastDuration(ToastDuration.Long)
+            .SetToastDuration(ToastDuration.Short)
             .AddAppLogoOverride(new Uri(karenPhoto), ToastGenericAppLogoCrop.Circle)
             .AddButton(new ToastButton()
                 .SetContent("Get the facts from her")
@@ -83,16 +64,25 @@ public partial class Form1 : Form
         ToastOperations.Alarm();
     }
 
+    /// <summary>
+    /// Prompt user for a favorite color via a text input
+    /// </summary>
     private void TextInputButton_Click(object sender, EventArgs e)
     {
         ToastOperations.TextBoxFavoriteColor();
     }
 
+    /// <summary>
+    /// Prompt user for a favorite color via a ComboBox
+    /// </summary>
     private void SelectButton_Click(object sender, EventArgs e)
     {
         ToastOperations.ComboBoxFavoriteColor();
     }
 
+    /// <summary>
+    /// Show notification after successful or failed download
+    /// </summary>
     private async void DownLoadButton_Click(object sender, EventArgs e)
     {
         var usHolidays = await WorkOperations.GetHolidays();
@@ -105,4 +95,18 @@ public partial class Form1 : Form
             ToastOperations.HolidaysDownloadFailed();
         }
     }
+
+    /// <summary>
+    /// Kill the annoying job if still scheduled
+    /// </summary>
+    private void StopScheduledNotificationButton_Click(object sender, EventArgs e)
+    {
+        Schedule? schedule = JobManager.AllSchedules.FirstOrDefault(x => x.Name == "Annoying");
+        if (schedule is not null)
+        {
+            JobManager.RemoveJob("Annoying");
+        }
+    }
+
+
 }
