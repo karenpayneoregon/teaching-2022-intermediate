@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ArticleButton = new System.Windows.Forms.Button();
+            this.InterceptButton = new System.Windows.Forms.Button();
             this.HeroButton = new System.Windows.Forms.Button();
             this.ScheduleButton = new System.Windows.Forms.Button();
             this.AlarmButton = new System.Windows.Forms.Button();
@@ -38,15 +38,15 @@
             this.StopScheduledNotificationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ArticleButton
+            // InterceptButton
             // 
-            this.ArticleButton.Location = new System.Drawing.Point(23, 257);
-            this.ArticleButton.Name = "ArticleButton";
-            this.ArticleButton.Size = new System.Drawing.Size(295, 29);
-            this.ArticleButton.TabIndex = 6;
-            this.ArticleButton.Text = "Show alert for article";
-            this.ArticleButton.UseVisualStyleBackColor = true;
-            this.ArticleButton.Click += new System.EventHandler(this.ExecuteAboutArticleButton_Click);
+            this.InterceptButton.Location = new System.Drawing.Point(23, 257);
+            this.InterceptButton.Name = "InterceptButton";
+            this.InterceptButton.Size = new System.Drawing.Size(295, 29);
+            this.InterceptButton.TabIndex = 6;
+            this.InterceptButton.Text = "Intercept";
+            this.InterceptButton.UseVisualStyleBackColor = true;
+            this.InterceptButton.Click += new System.EventHandler(this.InterceptButton_Click);
             // 
             // HeroButton
             // 
@@ -131,7 +131,7 @@
             this.Controls.Add(this.AlarmButton);
             this.Controls.Add(this.ScheduleButton);
             this.Controls.Add(this.HeroButton);
-            this.Controls.Add(this.ArticleButton);
+            this.Controls.Add(this.InterceptButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -142,7 +142,7 @@
 
         #endregion
 
-        private Button ArticleButton;
+        private Button InterceptButton;
         private Button HeroButton;
         private Button ScheduleButton;
         private Button AlarmButton;

@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
@@ -19,6 +20,9 @@ public class ToastOperations
 
     public static string MainKey => "conversationId";
 
+    public delegate void OnIntercept(int sender);
+    public static event OnIntercept OnInterceptHandler;
+    public static int Counter { get; set; } = 0;
     public static bool ListenerAvailable()
     {
         if (ApiInformation.IsTypePresent("Windows.UI.Notifications.Management.UserNotificationListener"))
@@ -46,7 +50,9 @@ public class ToastOperations
             {
                 if (args[MainKey] == Dictionary["key2"].ToString())
                 {
-                    Log.Information("Notification triggered");
+                    Counter ++;
+                    OnInterceptHandler?.Invoke(Counter);
+                    Log.Information("Notification triggered {T} times", Counter);
                 }
                 else if (args[MainKey] == Dictionary["key1"].ToString())
                 {

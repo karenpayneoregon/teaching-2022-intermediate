@@ -19,17 +19,21 @@ public partial class Form1 : Form
             });
         }
 
+        ToastOperations.OnInterceptHandler += ToastOperations_OnInterceptHandler;
+    }
+
+    private void ToastOperations_OnInterceptHandler(int sender)
+    {
+        InterceptButton.InvokeIfRequired(b => b.Text = $@"Intercept count [{sender}]");
     }
 
     /// <summary>
-    /// Here we present a notification and when the button is pressed in the notification
-    /// show a message dialog (which typically is not done but some might want this. 
     /// </summary>
-    private async void ExecuteAboutArticleButton_Click(object sender, EventArgs e)
+    private async void InterceptButton_Click(object sender, EventArgs e)
     {
-        ArticleButton.Enabled = false;
+        InterceptButton.Enabled = false;
         await Helpers.SimulateWorkAsync();
-        ArticleButton.Enabled = true;
+        InterceptButton.Enabled = true;
 
         var karenPhoto = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", @"Karen.png");
 
@@ -39,10 +43,9 @@ public partial class Form1 : Form
             .AddText("Hey")
             .SetToastDuration(ToastDuration.Short)
             .AddAppLogoOverride(new Uri(karenPhoto), ToastGenericAppLogoCrop.Circle)
-            .AddButton(new ToastButton()
-                .SetContent("Get the facts from her")
+            .AddButton(new ToastButton().SetContent("Go for it")
                 .AddArgument("action", "viewReport")
-                .AddArgument("webSite", "https://github.com/karenpayneoregon?tab=repositories"))
+                )
             .Show(toast =>
             {
                 toast.ExpirationTime = DateTime.Now.AddMinutes(2);
