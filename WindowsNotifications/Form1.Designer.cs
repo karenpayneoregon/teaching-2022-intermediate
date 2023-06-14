@@ -36,6 +36,7 @@
             this.SelectButton = new System.Windows.Forms.Button();
             this.DownLoadButton = new System.Windows.Forms.Button();
             this.StopScheduledNotificationButton = new System.Windows.Forms.Button();
+            this.SelectionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InterceptButton
@@ -118,12 +119,23 @@
             this.StopScheduledNotificationButton.UseVisualStyleBackColor = true;
             this.StopScheduledNotificationButton.Click += new System.EventHandler(this.StopScheduledNotificationButton_Click);
             // 
+            // SelectionButton
+            // 
+            this.SelectionButton.Location = new System.Drawing.Point(23, 327);
+            this.SelectionButton.Name = "SelectionButton";
+            this.SelectionButton.Size = new System.Drawing.Size(295, 29);
+            this.SelectionButton.TabIndex = 8;
+            this.SelectionButton.Text = "Select time interval";
+            this.SelectionButton.UseVisualStyleBackColor = true;
+            this.SelectionButton.Click += new System.EventHandler(this.SelectionButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(344, 378);
+            this.ClientSize = new System.Drawing.Size(344, 407);
+            this.Controls.Add(this.SelectionButton);
             this.Controls.Add(this.StopScheduledNotificationButton);
             this.Controls.Add(this.DownLoadButton);
             this.Controls.Add(this.SelectButton);
@@ -150,5 +162,6 @@
         private Button SelectButton;
         private Button DownLoadButton;
         private Button StopScheduledNotificationButton;
+        private Button SelectionButton;
     }
 }

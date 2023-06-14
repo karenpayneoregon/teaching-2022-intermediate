@@ -4,6 +4,7 @@ using Microsoft.Toolkit.Uwp.Notifications;
 using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
 using Log = Serilog.Log;
+#pragma warning disable CS8602
 
 namespace Notifications.Classes;
 
@@ -12,10 +13,11 @@ public class ToastOperations
 {
     public static Dictionary<string, int> Dictionary { get; } = new()
     {
-        { "key1", 100 },
-        { "key2", 200 },
-        { "key3", 300 },
-        { "key4", 400 }
+        { "key1", 100 }, // hero button, send user to a GitHub repository
+        { "key2", 200 }, // Intercept button
+        { "key3", 300 }, // alarm button
+        { "key4", 400 },  // Favorite color button for text box
+        { "key5", 500 }
     };
 
     public static string MainKey => "conversationId";
@@ -58,6 +60,14 @@ public class ToastOperations
                 {
                     Process.Start(new ProcessStartInfo(args["url"]) { UseShellExecute = true });
 
+                }
+                else if (args[MainKey] == Dictionary["key5"].ToString())
+                {
+                    ValueSet? valueSet = toastArgs.UserInput;
+                    if (!valueSet.Keys.Contains("time")) return;
+                    int time = Convert.ToInt32(valueSet["time"]);
+                    var item = TimeOperations.TimeList().FirstOrDefault(x => x.Id == time);
+                    item.Action();
                 }
                 else if (args[MainKey] == Dictionary["key3"].ToString())
                 {
@@ -212,6 +222,27 @@ public class ToastOperations
                 title: "What is your favorite color")
             .AddButton(new ToastButton()
                 .SetContent("Give it to me"))
+            .Show();
+    }
+
+    public static void SelectionBox()
+    {
+        new ToastContentBuilder()
+            .AddArgument("conversationId", Dictionary["key5"])
+            .AddText("Question")
+            .AddToastInput(new ToastSelectionBox("time")
+            {
+                DefaultSelectionBoxItemId = "15",
+                Items =
+                {
+                    new ToastSelectionBoxItem("15", "15 minutes"),
+                    new ToastSelectionBoxItem("30", "30 minutes"),
+                    new ToastSelectionBoxItem("45", "45 minutes"),
+                    new ToastSelectionBoxItem("60", "1 hour"),
+                }
+
+            })
+            .AddButton(new ToastButton().SetContent("Give it to me"))
             .Show();
     }
 }

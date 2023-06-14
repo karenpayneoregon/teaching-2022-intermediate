@@ -1,3 +1,4 @@
+using Windows.UI.Notifications;
 using FluentScheduler;
 using Microsoft.Toolkit.Uwp.Notifications;
 
@@ -111,5 +112,8 @@ public partial class Form1 : Form
         }
     }
 
-
+    private void SelectionButton_Click(object sender, EventArgs e)
+    {
+        ToastOperations.SelectionBox();
+    }
 }

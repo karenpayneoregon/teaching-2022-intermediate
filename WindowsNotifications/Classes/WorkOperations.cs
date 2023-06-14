@@ -22,7 +22,8 @@ public class WorkOperations
 
         using var httpClient = new HttpClient();
 
-        var response = await httpClient.GetAsync($"https://date.nager.at/api/v3/publicholidays/{DateTime.Now.Year}/{countryCode}");
+        var response = await httpClient.GetAsync(
+            $"https://date.nager.at/api/v3/publicholidays/{DateTime.Now.Year}/{countryCode}");
 
         if (response.IsSuccessStatusCode)
         {
