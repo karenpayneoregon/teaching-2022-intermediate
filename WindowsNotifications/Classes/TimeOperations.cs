@@ -15,6 +15,7 @@ public class TimeOperations
     public static List<Time> TimeList() =>
         new()
         {
+            new () { Id =  0, Action = () => Debug.WriteLine("Now") },
             new () { Id = 15, Action = () => Debug.WriteLine("15 minutes") },
             new () { Id = 30, Action = () => Debug.WriteLine("30 minutes")  },
             new () { Id = 45, Action = () => Debug.WriteLine("45 minutes")  },

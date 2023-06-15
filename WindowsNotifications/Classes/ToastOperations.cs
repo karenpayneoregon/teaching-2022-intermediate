@@ -225,16 +225,23 @@ public class ToastOperations
             .Show();
     }
 
+    /// <summary>
+    /// Simulate the need to restart the current computer
+    /// </summary>
     public static void SelectionBox()
     {
         new ToastContentBuilder()
             .AddArgument("conversationId", Dictionary["key5"])
-            .AddText("Question")
+            .AddText("You computer must restart")
+            .AddText("Select when")
+            // id, time is used above in OnActivated
             .AddToastInput(new ToastSelectionBox("time")
             {
-                DefaultSelectionBoxItemId = "15",
+                DefaultSelectionBoxItemId = "0",
+                // note only five items are permitted
                 Items =
                 {
+                    new ToastSelectionBoxItem("0", "Now"),
                     new ToastSelectionBoxItem("15", "15 minutes"),
                     new ToastSelectionBoxItem("30", "30 minutes"),
                     new ToastSelectionBoxItem("45", "45 minutes"),
@@ -242,7 +249,8 @@ public class ToastOperations
                 }
 
             })
-            .AddButton(new ToastButton().SetContent("Give it to me"))
+            .AddButton(new ToastButton().SetContent("OK"))
+            .SetToastScenario(ToastScenario.Reminder)
             .Show();
     }
 }
