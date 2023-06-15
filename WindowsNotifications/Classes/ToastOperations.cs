@@ -68,6 +68,7 @@ public class ToastOperations
                     int time = Convert.ToInt32(valueSet["time"]);
                     var item = TimeOperations.TimeList().FirstOrDefault(x => x.Id == time);
                     item.Action();
+
                 }
                 else if (args[MainKey] == Dictionary["key3"].ToString())
                 {
@@ -92,7 +93,6 @@ public class ToastOperations
                     if (!string.IsNullOrWhiteSpace(favoriteColor))
                     {
                         Log.Information($"favorite color: {favoriteColor}");
-
                     }
 
                 }

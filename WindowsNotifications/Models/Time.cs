@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Toolkit.Uwp.Notifications;
+﻿#pragma warning disable CS8618
 
 namespace Notifications.Models;
 
 public class Time
 {
     public int Id { get; set; }
+    /// <summary>
+    /// Operation to perform
+    /// </summary>
     public Action Action;
 }
