@@ -1,5 +1,21 @@
-# For teaching 
+# Markdown
 
-- C#
-- Index/ranges
-- EF Core
+
+H~2~O
+
+:small_orange_diamond:
+
+:small_blue_diamond:
+
+:heavy_check_mark
+
+
+
+
+
+
+
+
+
+
+

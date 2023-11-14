@@ -26,7 +26,7 @@ namespace Ranges_examples
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Demos.Creating1();
+            Demos.CreatingContacts2();
             Console.ReadLine();
         }
 

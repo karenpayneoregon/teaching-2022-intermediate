@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using TaxpayerLibraryEntityVersion.Classes;
 using TaxpayerLibraryEntityVersion.Models;
 using TaxpayerMocking.Classes;
 
@@ -6,32 +7,52 @@ namespace TaxpayerMocking
 {
     internal partial class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            //var test = SqlStatements.LongestColumnLength("", "");
+            var statement = SqlStatements.MinMaxForColumn("Taxpayer","LastName");
+            List<ColumnResult> columnResults = await DapperOperations.GetColumnLengths(statement);
+
+            foreach (var col in columnResults)
+            {
+                Console.WriteLine($"{col.Value,-20}{col.Length}");
+            }
+
+  
 
             SetupDatabase.Initialize(25);
             List<Taxpayer> taxpayerList = SetupDatabase.GetTaxpayers();
 
-            JsonExample(taxpayerList);
+            var result = taxpayerList.RangeDetails();
 
-            var table = CreateTable();
-
-            AnsiConsole.Clear();
-
-            foreach (var taxpayer in taxpayerList)
+            foreach (var container in result)
             {
-                if (taxpayer.StartDate.HasValue)
-                {
-                    table.AddRow(taxpayer.Id.ToString(),
-                        taxpayer.FullName,
-                        taxpayer.SocialSecurityNumber,
-                        taxpayer.Pin,
-                        taxpayer.StartDate.Value.ToString("MM/dd/yyyy"),
-                        taxpayer.Category.Description);
-                }
+                Console.WriteLine($"{container.Value.Id, -5:D4}{container.Value.FullName, -30} {container.StartIndex}' {container.EndIndex}");
             }
 
-            AnsiConsole.Write(table);
+            Console.WriteLine();
+
+
+            //JsonExample(taxpayerList);
+
+            //var table = CreateTable();
+
+            //AnsiConsole.Clear();
+
+            //foreach (var taxpayer in taxpayerList)
+            //{
+            //    if (taxpayer.StartDate.HasValue)
+            //    {
+            //        table.AddRow(taxpayer.Id.ToString(),
+            //            taxpayer.FullName,
+            //            taxpayer.SocialSecurityNumber,
+            //            taxpayer.Pin,
+            //            taxpayer.StartDate.Value.ToString("MM/dd/yyyy"),
+            //            taxpayer.Category.Description);
+            //    }
+            //}
+
+            //AnsiConsole.Write(table);
             Console.ReadLine();
         }
 

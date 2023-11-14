@@ -56,7 +56,7 @@ namespace LanguageExtensions
         /// <returns>start and end indices set for entire array</returns>
         public static List<Contacts> ContactsListIndices(this Contacts[] contactsArray)
         {
-            List<int> rangeReverse = Enumerable.Range(0, contactsArray.Length).Reverse().ToList();
+            //List<int> rangeReverse = Enumerable.Range(0, contactsArray.Length).Reverse().ToList();
 
             List<Contacts> contacts = contactsArray.Select(
                 (contact, index) => new Contacts()
@@ -64,7 +64,7 @@ namespace LanguageExtensions
                     FirstName = contact.FirstName,
                     LastName = contact.LastName,
                     StartIndex = new Index(index),
-                    EndIndex = new Index(rangeReverse[index], true)
+                    EndIndex =  new Index(contactsArray.Length - index -1, true)// new Index(rangeReverse[index], true)
                 }).ToList();
 
             return contacts;

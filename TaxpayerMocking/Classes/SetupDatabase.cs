@@ -5,7 +5,7 @@ using TaxpayerLibraryEntityVersion.Models;
 using TaxpayerMocking.LanguageExtensions;
 
 using static TaxpayerMocking.Classes.Helpers;
-using B = Bogus.Extensions.UnitedStates.ExtensionsForUnitedStates;
+using BEU = Bogus.Extensions.UnitedStates.ExtensionsForUnitedStates;
 
 namespace TaxpayerMocking.Classes;
 
@@ -115,7 +115,7 @@ internal class SetupDatabase
     public static void StandardSocialSecurityNumber()
     {
 
-        var list = Enumerable.Range(1, 12).Select(x => B.Ssn(new Person()));
+        var list = Enumerable.Range(1, 12).Select(x => BEU.Ssn(new Person()));
 
         foreach (var ssn in list)
         {

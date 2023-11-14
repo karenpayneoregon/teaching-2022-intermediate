@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fbd04c04-e39e-41e8-b05c-1b90550c07d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Teaching.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Teaching.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/ApplicationJobs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/ControlExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/Dialogs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/Helpers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/JobsRegistry.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/SetupLogging.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/TimeOperations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/ToastOperations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Classes/WorkOperations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Form1.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Form1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Form1.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/GlobalUsings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Images/CheckBoxes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Images/Karen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Images/VisualStudioTips_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Images/agent3.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Images/alarm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Images/auto1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Images/checkMark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Models/PublicHoliday.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Models/Time.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Notifications.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Properties/Resources.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Properties/Resources.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/Stash.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/CheckBoxes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/Title1.snag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/csharp1.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/dialog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/exclamation24.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/notification1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/password.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/required.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/assets/title.snag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WindowsNotifications/readme.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2WoQcs7Pahh6ohJGepOi9ejxEiR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbd04c04-e39e-41e8-b05c-1b90550c07d9" name="Changes" comment="" />
+      <created>1697396535020</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697396535020</updated>
+      <workItem from="1697396538577" duration="48000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
